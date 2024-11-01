@@ -31,7 +31,7 @@ This synthetic data will allow for training and validating predictive models to 
 
 ### Directory Structure
 
-```
+---
 - **code/**: Contains the source code files for the project.
   - `__pycache__/`: Directory for compiled Python files.
   - `app.py`: Main application script.
@@ -58,7 +58,7 @@ This synthetic data will allow for training and validating predictive models to 
 - `readme.md`: This README file.
 - `sample1.ipynb`, `sample2.ipynb`, `sample3.ipynb`: Jupyter Notebook samples for exploration and analysis.
 
-```
+---
 
 
 
