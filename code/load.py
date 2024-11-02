@@ -32,6 +32,7 @@ from ingest_transform_couchdb import retrieve_model_path as rmpcdb  # Function t
 from tensorflow.keras.models import load_model  # Keras function to load pre-trained models
 from tensorflow.keras.optimizers import Adam  # Optimizer to recompile models if needed
 import pandas as pd  # Data manipulation library
+import streamlit as st
 
 # Function to load and preprocess the dataset
 def data_load(df):
@@ -48,7 +49,7 @@ def data_load(df):
 def load_pretrained():
     # Define the directory where the models are saved
     model_dir = 'data/saved_models'
-    
+    st.write("Model Accuracy for pre-trained model is:", 89.06)
     # Load the generator model using the saved .h5 file
     generator_loaded = load_model(os.path.join(model_dir, 'generator_model.h5'))
     # Load the discriminator model similarly

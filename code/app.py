@@ -74,7 +74,7 @@ with tab2:
     st.divider()  # Visual divider
 
     # Model-specific settings
-    model_name = 'GAN Model Training'  # Display name of the model
+    model_name = 'GAN'  # Display name of the model
     st.markdown(f"<h3 style='text-align: center; color: white;'>{model_name}</h3>", unsafe_allow_html=True)
     epochs = st.number_input('Number of Epochs:', min_value=1, max_value=10000, value=100, step=1)  # Number of epochs
 

@@ -85,6 +85,8 @@ The synthetic dataset contains features that mirror real-world customer data, in
 5. **Manual Prediction**: Enable manual input of synthetic customer data for churn prediction. [generate.py]
 6. **Web Application**: A Streamlit app that allows interaction with the data generation pipeline and model, providing churn predictions based on synthetic data input. [app.py]
 
+*Note*: The data generated also includes CustomerID. Therefore duplicate customerId would possible. Please Drop the customerId before using for data analysis.
+
 ---
 
 ### Steps to Run
