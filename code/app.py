@@ -21,7 +21,7 @@
 
 # Dependency: 
     # Environment:     
-        # Python 3.11.5
+        # Python 3.10.11
         # Streamlit 1.36.0
 # Importing required libraries for Streamlit app functionality and data manipulation
 import os

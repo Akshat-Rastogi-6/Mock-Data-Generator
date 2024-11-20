@@ -29,6 +29,72 @@ This synthetic data will allow for training and validating predictive models to 
 
 ---
 
+### Database Setup
+
+#### PostgreSQL Setup
+
+1. **Install PostgreSQL**
+   - Download and install PostgreSQL from [official website](https://www.postgresql.org/download/)
+   - Verify installation: `psql --version`
+
+2. **Create Database and User**
+   ```sql
+   CREATE DATABASE fake_data_db;
+   CREATE USER fake_data_user WITH PASSWORD 'your_password';
+   GRANT ALL PRIVILEGES ON DATABASE fake_data_db TO fake_data_user;
+   ```
+
+3. **Configure Environment Variables**
+   ```
+   POSTGRES_DB=fake_data_db
+   POSTGRES_USER=fake_data_user
+   POSTGRES_PASSWORD=your_password
+   POSTGRES_HOST=localhost
+   POSTGRES_PORT=5432
+   ```
+
+4. **Initialize Tables**
+   ```sql
+   CREATE TABLE model_paths (
+       id SERIAL PRIMARY KEY,
+       path VARCHAR(255) NOT NULL,
+       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+   );
+
+   CREATE TABLE data_paths (
+       id SERIAL PRIMARY KEY,
+       path VARCHAR(255) NOT NULL,
+       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+   );
+   ```
+
+   **Note**: Do these in ingest_transform.py file.
+
+#### CouchDB Setup
+
+1. **Install CouchDB**
+   - Download and install CouchDB from [official website](https://couchdb.apache.org/#download)
+   - Verify installation by accessing: `http://localhost:5984/_utils`
+
+2. **Create Database**
+   - Open Fauxton UI (CouchDB Dashboard)
+   - Create two databases:
+     - `model_paths`
+     - `data_paths`
+
+3. **Configure Environment Variables**
+   ```
+   COUCHDB_USER=admin
+   COUCHDB_PASSWORD=your_password
+   COUCHDB_HOST=localhost
+   COUCHDB_PORT=5984
+   COUCHDB_MODEL_DB=model_paths
+   COUCHDB_DATA_DB=data_paths
+   ```
+
+  **Note**: Do these in ingest_transform_couchdb.py file.
+
+
 ### Directory Structure
 
 ---

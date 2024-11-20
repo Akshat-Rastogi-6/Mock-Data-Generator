@@ -1,0 +1,9 @@
+streamlit==1.36.0
+tensorflow==2.15.0
+numpy==1.24.3
+pandas==2.1.4
+python-dotenv==1.0.0
+couchdb==1.2
+psycopg2-binary==2.9.9
+sklearn==0.0
+
