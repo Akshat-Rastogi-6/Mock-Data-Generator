@@ -11,11 +11,8 @@
             # Integration test: Pass
      
     # Description: This Streamlit app allows users to input features and make predictions using Unsupervised Learning.
-        # SQLite: Yes
-        # MQs: No
-        # Cloud: No
-        # Data versioning: No
-        # Data masking: No
+        # PostgreSQL: Yes
+        # CouchDB: Yes
 
 # CODE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
